@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Company_Application</string>
+    <string name="personal">Личный кабинет</string>
+    <string name="projects">Проекты</string>
+    <string name="reports">Отчеты</string>
+
 </resources>
