@@ -1,20 +1,22 @@
 package com.example.company_application
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    private var login: String? = null
+    private lateinit var menu: Menu
 
     private val signInLauncher = registerForActivityResult(
         FirebaseAuthUIActivityResultContract()
@@ -27,21 +29,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         openRegistrationScreen()
+
+    }
+
+    override fun invalidateOptionsMenu() {
+        super.invalidateOptionsMenu()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
-        val user = FirebaseAuth.getInstance().currentUser
-        val login = user?.email.toString()
-
-        Log.i("login", login)
-
-        //проверка, какой пользователь входит
-        if (login[0] == '1'){
-            Log.i("login", "login_1")
-        }else{
-            inflater.inflate(R.menu.menu, menu)
-        }
+        inflater.inflate(R.menu.menu, menu)
+        this.menu = menu;
         return true
     }
 
@@ -79,7 +77,18 @@ class MainActivity : AppCompatActivity() {
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
-            // Successfully signed in
+            val user = FirebaseAuth.getInstance().currentUser
+            login = user?.email.toString()
+            //проверка, какой пользователь входит
+
+            if (login!![0] == '1'){
+                Log.i("login", "login_1")
+            }else{
+                val item = menu.findItem(R.id.personal)
+                item.isVisible = false;
+            }
+
+
         }
     }
 }

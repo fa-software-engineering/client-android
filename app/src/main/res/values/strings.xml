@@ -3,5 +3,10 @@
     <string name="personal">Личный кабинет</string>
     <string name="projects">Проекты</string>
     <string name="reports">Отчеты</string>
+    <string name="fio">ФИО:</string>
+    <string name="department">Отдел:</string>
+    <string name="position">Позиция:</string>
+    <string name="grade">Грейд:</string>
+    <string name="skills">Навыки:</string>
 
 </resources>
