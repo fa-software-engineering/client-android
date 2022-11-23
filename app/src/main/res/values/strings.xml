@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Company_Application</string>
+    <string name="support_menu_list_of_user_requests">Список обращений</string>
+    <string name="support_activity_label">Служба поддержки</string>
+    <string name="activity_user_requests_label">Список обращений пользователей</string>
+    <string name="analyst_menu_reports">Отчеты</string>
+    <string name="activity_analyst_label">Аналитик</string>
+    <string name="activity_reports_label">Отчеты</string>
 </resources>
