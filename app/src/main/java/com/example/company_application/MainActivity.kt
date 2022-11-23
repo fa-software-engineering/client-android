@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, ReportsActivity::class.java))
                 true
             }
+            R.id.staff -> {
+                startActivity(Intent(this, StaffActivity::class.java))
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -84,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             if (login!![0] == '1'){
                 Log.i("login", "login_1")
             }else{
-                val item = menu.findItem(R.id.personal)
+                val item = menu.findItem(R.id.staff)
                 item.isVisible = false;
             }
 
