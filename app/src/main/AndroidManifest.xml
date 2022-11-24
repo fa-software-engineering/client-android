@@ -15,19 +15,40 @@
         android:theme="@style/Theme.Company_Application"
         tools:targetApi="31">
         <activity
-            android:name=".view.ReportsActivity"
+            android:name=".main.view.Report"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main.view.ReportAdd"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main.view.Request"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main.view.ReportsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.AnalystActivity"
+            android:name=".main.view.AnalystActivity"
             android:exported="false" />
         <activity
-            android:name=".view.UserRequestsActivity"
+            android:name=".main.view.UserRequestsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.SupportActivity"
+            android:name=".main.view.SupportActivity"
             android:exported="false" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".main.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

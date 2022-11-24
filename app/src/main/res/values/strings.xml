@@ -6,4 +6,20 @@
     <string name="analyst_menu_reports">Отчеты</string>
     <string name="activity_analyst_label">Аналитик</string>
     <string name="activity_reports_label">Отчеты</string>
+    <string name="support_menu_profile">Личный кабинет</string>
+    <string name="support_menu_project">Проект</string>
+    <string name="support_menu_reports">Отчеты</string>
+    <string name="activity_request_label">Обращение пользователя</string>
+    <string name="activity_request_button_done">Выполнено</string>
+    <string name="activity_request_editText_hint">Введите ответ пользователю</string>
+    <string name="activity_request_editText_autofill_hint">Здравствуйте!</string>
+    <string name="activity_request_button_answer">Ответить</string>
+    <string name="activity_reports_buttonAdd_title">Добавить</string>
+    <string name="activity_report_add_label">Добавить отчет</string>
+    <string name="activity_report_add_buttonSaveReport_text">Сохранить</string>
+    <string name="activity_report_add_code_textField_hint">Введите код</string>
+    <string name="activity_report_add_name_textField_hint">Введите наименование</string>
+    <string name="activity_report_add_description_textField_hint">Введите описание</string>
+    <string name="activity_report_label">Отчет</string>
+
 </resources>
