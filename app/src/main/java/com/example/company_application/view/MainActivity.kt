@@ -1,4 +1,4 @@
-package com.example.company_application
+package com.example.company_application.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,11 +7,11 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.example.company_application.R
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.reports -> {
-                startActivity(Intent(this, ReportsActivity::class.java))
+                startActivity(Intent(this, RecordsActivity::class.java))
                 true
             }
             R.id.staff -> {
