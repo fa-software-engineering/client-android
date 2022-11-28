@@ -58,7 +58,7 @@
         android:ems="10"
         android:hint="@string/activity_request_editText_hint"
         android:inputType="textPersonName"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
