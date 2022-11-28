@@ -19,6 +19,7 @@ class ReportsActivity : AppCompatActivity() {
 
         array = ArrayList()
         arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, array)
+        activity_reports_listView.adapter = arrayAdapter
 
         activity_reports_listView.setOnItemClickListener { parent, view, position, id ->
             val element = view as TextView

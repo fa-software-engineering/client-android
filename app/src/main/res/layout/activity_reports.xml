@@ -10,7 +10,7 @@
         android:id="@+id/activity_reports_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="136dp"
         android:layout_marginTop="28dp"
         android:text="@string/activity_reports_label"
         android:textColor="@color/dark_gray"
@@ -21,10 +21,11 @@
 
     <ListView
         android:id="@+id/activity_reports_listView"
-        android:layout_width="407dp"
-        android:layout_height="391dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="359dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="164dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,11 +33,10 @@
         android:id="@+id/activity_reports_buttonAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="368dp"
         android:text="@string/activity_reports_buttonAdd_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,7 @@ class UserRequestsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_requests)
         array = ArrayList()
         arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, array)
+        activity_user_requests_listView.adapter = arrayAdapter
 
         activity_user_requests_listView.setOnItemClickListener{
             parent, clickedView, position, id ->
