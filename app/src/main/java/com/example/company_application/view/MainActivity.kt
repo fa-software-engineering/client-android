@@ -2,6 +2,13 @@ package com.example.company_application.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
@@ -9,6 +16,9 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private var login: String? = null
+    private lateinit var menu: Menu
 
     private val signInLauncher = registerForActivityResult(
         FirebaseAuthUIActivityResultContract()
@@ -21,6 +31,40 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         openRegistrationScreen()
+
+    }
+
+    override fun invalidateOptionsMenu() {
+        super.invalidateOptionsMenu()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        this.menu = menu;
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.personal -> {
+                startActivity(Intent(this, PersonalActivity::class.java))
+                true
+            }
+            R.id.projects -> {
+                startActivity(Intent(this, ProjectsActivity::class.java))
+                true
+            }
+            R.id.reports -> {
+                startActivity(Intent(this, RecordsActivity::class.java))
+                true
+            }
+            R.id.staff -> {
+                startActivity(Intent(this, StaffActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun openRegistrationScreen(){
@@ -39,6 +83,18 @@ class MainActivity : AppCompatActivity() {
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
+            val user = FirebaseAuth.getInstance().currentUser
+            login = user?.email.toString()
+            //проверка, какой пользователь входит
+
+            if (login!![0] == '1'){
+                Log.i("login", "login_1")
+            }else{
+                val item = menu.findItem(R.id.staff)
+                item.isVisible = false;
+            }
+
+
             // Successfully signed in
             val user = FirebaseAuth.getInstance().currentUser
         }

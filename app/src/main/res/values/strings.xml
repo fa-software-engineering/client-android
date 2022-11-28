@@ -21,5 +21,16 @@
     <string name="activity_report_add_name_textField_hint">Введите наименование</string>
     <string name="activity_report_add_description_textField_hint">Введите описание</string>
     <string name="activity_report_label">Отчет</string>
+    <string name="personal">Личный кабинет</string>
+    <string name="projects">Проекты</string>
+    <string name="reports">Отчеты</string>
+    <string name="staff">Реестр сотрудников</string>
+    <string name="fio">ФИО:</string>
+    <string name="department">Отдел:</string>
+    <string name="position">Позиция:</string>
+    <string name="grade">Грейд:</string>
+    <string name="skills">Навыки:</string>
+    <string name="add">Добавить</string>
+    <string name="search">Поиск</string>
 
 </resources>
