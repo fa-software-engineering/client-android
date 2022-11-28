@@ -1,8 +1,9 @@
-package com.example.company_application
+package com.example.company_application.view
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import com.example.company_application.R
 import kotlinx.android.synthetic.main.activity_projects.*
 
 
