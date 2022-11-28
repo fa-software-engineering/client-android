@@ -15,7 +15,7 @@ class StaffActivity : AppCompatActivity() {
         setContentView(R.layout.activity_staff)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
-        listView.adapter = adapter;
+        project_listView.adapter = adapter;
 
         listItems.add("Сотрудник 1")
         listItems.add("Сотрудник 2")

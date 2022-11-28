@@ -7,7 +7,7 @@ import com.example.company_application.R
 class RequestDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_request)
+        setContentView(R.layout.activity_request_detail)
         val userData = intent.getStringExtra("data")
     }
 }

@@ -27,13 +27,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_personal)
         openRegistrationScreen()
 
-    }
-
-    override fun invalidateOptionsMenu() {
-        super.invalidateOptionsMenu()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -45,10 +41,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.personal -> {
-                startActivity(Intent(this, PersonalActivity::class.java))
-                true
-            }
             R.id.projects -> {
                 startActivity(Intent(this, ProjectsActivity::class.java))
                 true
@@ -61,11 +53,25 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, StaffActivity::class.java))
                 true
             }
+            R.id.request -> {
+                startActivity(Intent(this, UserRequestsActivity::class.java))
+                true
+            }
+            R.id.support -> {
+                startActivity(Intent(this, SupportActivity::class.java))
+                true
+            }
+            //TODO: Вызов окна кандидатов
+            R.id.candidates -> {
+                startActivity(Intent(this, UserRequestsActivity::class.java))
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+
     }
 
-    private fun openRegistrationScreen(){
+    private fun openRegistrationScreen() {
 
         // Choose authentication providers
         val providers = arrayListOf(AuthUI.IdpConfig.EmailBuilder().build())
@@ -84,12 +90,35 @@ class MainActivity : AppCompatActivity() {
             val user = FirebaseAuth.getInstance().currentUser
             login = user?.email.toString()
             //проверка, какой пользователь входит
-
-            if (login!![0] == '1'){
-                Log.i("login", "login_1")
-            }else{
-                val item = menu.findItem(R.id.staff)
-                item.isVisible = false;
+            when (login!![0]) {
+                '1' -> {
+                    menu.findItem(R.id.request).isVisible = false
+                    menu.findItem(R.id.candidates).isVisible = false
+                }
+                '2' -> {
+                    menu.findItem(R.id.candidates).isVisible = false
+                    menu.findItem(R.id.support).isVisible = false
+                    menu.findItem(R.id.staff).isVisible = false
+                    menu.findItem(R.id.reports).isVisible = false
+                    menu.findItem(R.id.projects).isVisible = false
+                }
+                '3' -> {
+                    menu.findItem(R.id.candidates).isVisible = false
+                    menu.findItem(R.id.staff).isVisible = false
+                    menu.findItem(R.id.request).isVisible = false
+                    menu.findItem(R.id.projects).isVisible = false
+                }
+                '4' -> {
+                    menu.findItem(R.id.reports).isVisible = false
+                    menu.findItem(R.id.staff).isVisible = false
+                    menu.findItem(R.id.request).isVisible = false
+                    menu.findItem(R.id.projects).isVisible = false
+                }
+                '5' -> {
+                    menu.findItem(R.id.staff).isVisible = false
+                    menu.findItem(R.id.candidates).isVisible = false
+                    menu.findItem(R.id.request).isVisible = false
+                }
             }
         }
     }

@@ -1,7 +1,9 @@
 package com.example.company_application.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
 import kotlinx.android.synthetic.main.activity_projects.*
@@ -17,11 +19,26 @@ class ProjectsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_projects)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
-        listView.adapter = adapter;
+        project_listView.adapter = adapter;
 
         listItems.add("Проект 1")
         listItems.add("Проект 2")
         adapter.notifyDataSetChanged()
+
+        project_add.setOnClickListener{
+            val intent = Intent(this, ProjectAddActivity::class.java)
+            startActivity(intent)
+        }
+
+        project_listView.setOnItemClickListener { parent, view, position, id ->
+            val element = view as TextView
+            val data = element.text.toString()
+
+            val intent = Intent(this, ReportDetailActivity::class.java)
+            intent.putExtra("reportData", data)
+            startActivity(intent)
+
+        }
     }
 
 

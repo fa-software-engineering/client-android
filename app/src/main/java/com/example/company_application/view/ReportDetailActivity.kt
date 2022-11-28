@@ -7,7 +7,7 @@ import com.example.company_application.R
 class ReportDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_report)
+        setContentView(R.layout.activity_report_detail)
         val data = intent.getStringExtra("reportData")
     }
 }

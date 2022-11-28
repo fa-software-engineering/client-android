@@ -10,17 +10,19 @@ import com.example.company_application.R
 import kotlinx.android.synthetic.main.activity_reports.*
 
 class ReportsActivity : AppCompatActivity() {
-    private lateinit var array : ArrayList<String>
-    private lateinit var arrayAdapter : ArrayAdapter<String>
+    private lateinit var listItems : ArrayList<String>
+    private lateinit var adapter : ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reports)
 
-        array = ArrayList()
-        arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, array)
+        listItems = ArrayList()
+        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
+        reports_listView.adapter = adapter
 
-        activity_reports_listView.setOnItemClickListener { parent, view, position, id ->
+
+        reports_listView.setOnItemClickListener { parent, view, position, id ->
             val element = view as TextView
             val data = element.text.toString()
             Toast.makeText(this, "Данные выбранного отчета: $data", Toast.LENGTH_LONG).show()
@@ -34,6 +36,11 @@ class ReportsActivity : AppCompatActivity() {
             val intent = Intent(this, ReportAddActivity::class.java)
             startActivity(intent)
         }
+
+        listItems.add("Отчет 1")
+        listItems.add("Отчет 2")
+        adapter.notifyDataSetChanged()
+
     }
 
     //TODO - Получение даннных с Api у бэка
@@ -41,7 +48,7 @@ class ReportsActivity : AppCompatActivity() {
 
     }
     //TODO - Отправка данных на Api у бэка
-    private fun sentDataToDB(data : String){
+    private fun sendDataToDB(data : String){
 
     }
 }
