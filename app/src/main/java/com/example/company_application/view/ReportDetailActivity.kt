@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.company_application.R
 
-class Request : AppCompatActivity() {
+class ReportDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_request)
-        val userData = intent.getStringExtra("data")
+        setContentView(R.layout.activity_report)
+        val data = intent.getStringExtra("reportData")
     }
 }

@@ -25,13 +25,13 @@ class ReportsActivity : AppCompatActivity() {
             val data = element.text.toString()
             Toast.makeText(this, "Данные выбранного отчета: $data", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, Report::class.java)
+            val intent = Intent(this, ReportDetailActivity::class.java)
             intent.putExtra("reportData", data)
             startActivity(intent)
 
         }
         activity_reports_buttonAdd.setOnClickListener{
-            val intent = Intent(this, ReportAdd::class.java)
+            val intent = Intent(this, ReportAddActivity::class.java)
             startActivity(intent)
         }
     }

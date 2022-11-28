@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.reports -> {
-                startActivity(Intent(this, RecordsActivity::class.java))
+                startActivity(Intent(this, ReportsActivity::class.java))
                 true
             }
             R.id.staff -> {

@@ -2,11 +2,10 @@ package com.example.company_application.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.company_application.R
 import kotlinx.android.synthetic.main.activity_report_add.*
 
-class ReportAdd : AppCompatActivity() {
+class ReportAddActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_add)

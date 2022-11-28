@@ -25,7 +25,7 @@ class UserRequestsActivity : AppCompatActivity() {
             val data : String = item.text.toString()
             Toast.makeText(this, "Данные выбранного пользователя: $data", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, Request::class.java)
+            val intent = Intent(this, RequestDetailActivity::class.java)
             intent.putExtra("userData", data)
             startActivity(intent)
         }
