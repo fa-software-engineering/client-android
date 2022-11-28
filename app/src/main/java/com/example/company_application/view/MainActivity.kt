@@ -3,12 +3,10 @@ package com.example.company_application.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
-import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
@@ -93,10 +91,6 @@ class MainActivity : AppCompatActivity() {
                 val item = menu.findItem(R.id.staff)
                 item.isVisible = false;
             }
-
-
-            // Successfully signed in
-            val user = FirebaseAuth.getInstance().currentUser
         }
     }
 }
