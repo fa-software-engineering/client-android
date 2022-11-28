@@ -32,5 +32,15 @@
     <string name="problem">Опишите Вашу проблему</string>
     <string name="project_add">Добавление проекта</string>
     <string name="skills_add">Добавить скиллы</string>
+    <string name="activity_candidates_addCandidate_text">Добавить</string>
+    <string name="activity_candidates_labelText">Кандидаты</string>
+    <string name="activity_candidate_label">Кандидат</string>
+    <string name="activity_candidate_add_grade_textField_hint">Введите грейд</string>
+    <string name="activity_candidate_add_FIO_textField_hint">Введите ФИО</string>
+    <string name="activity_candidate_add_role_textField_hint">Введите роль</string>
+    <string name="activity_candidate_add_position_textField_hint">Введите позицию</string>
+    <string name="activity_candidate_add_skills_textField_hint">Введите навыки</string>
+    <string name="activity_candidate_saveBtn_text">Сохранить</string>
+    <string name="activity_candidate_deleteBtn_text">Удалить</string>
 
 </resources>
