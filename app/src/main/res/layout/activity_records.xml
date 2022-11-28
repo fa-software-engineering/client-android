@@ -10,8 +10,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="36dp"
         android:text="@string/reports"
         android:textColor="@color/dark_gray"
         android:textSize="24sp"
@@ -21,8 +21,8 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_width="360dp"
+        android:layout_height="421dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
