@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
+    tools:context=".view.staff.StaffDetailActivity"
     android:background="@color/azure">
 
     <TextView
@@ -35,9 +35,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="35dp"
-        android:text="@string/personal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/personal_staff"
         android:textColor="@color/dark_gray"
         android:textSize="24sp"
         android:textStyle="bold|italic"
@@ -80,59 +80,80 @@
         android:textSize="16sp"
         android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/fio_edit"
+    <EditText
+        android:id="@+id/fio_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="105dp"
-        android:text=""
-        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/depart_edit"
+    <EditText
+        android:id="@+id/depart_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="35dp"
-        android:text=""
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/fio_edit"
-        android:textSize="16sp" />
+        app:layout_constraintTop_toBottomOf="@+id/fio_edit_text" />
 
-    <TextView
-        android:id="@+id/pos_edit"
+    <EditText
+        android:id="@+id/pos_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="35dp"
-        android:text=""
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/depart_edit"
-        android:textSize="16sp" />
+        app:layout_constraintTop_toBottomOf="@+id/depart_edit_text" />
 
-    <TextView
-        android:id="@+id/grade_edit"
+    <EditText
+        android:id="@+id/grade_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="35dp"
-        android:text=""
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/pos_edit"
-        android:textSize="16sp" />
+        app:layout_constraintTop_toBottomOf="@+id/pos_edit_text" />
 
-    <TextView
-        android:id="@+id/skills_edit"
+    <EditText
+        android:id="@+id/skills_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="35dp"
-        android:text=""
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/tv"
-        app:layout_constraintTop_toBottomOf="@+id/grade_edit"
-        android:textSize="16sp" />
+        app:layout_constraintTop_toBottomOf="@+id/grade_edit_text" />
+
+    <Button
+        android:id="@+id/save_personal_staff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skills_edit_text" />
+
+    <Button
+        android:id="@+id/delete_personal_staff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/activity_candidate_deleteBtn_text"
+        app:layout_constraintStart_toEndOf="@+id/save_personal_staff"
+        app:layout_constraintTop_toBottomOf="@+id/skills_edit_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

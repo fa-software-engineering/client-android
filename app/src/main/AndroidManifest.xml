@@ -15,6 +15,34 @@
         android:theme="@style/Theme.Company_Application"
         tools:targetApi="31">
         <activity
+            android:name=".view.SupportActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.staff.StaffAddActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.staff.StaffDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.project.ProjectDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.CandidateActivity"
             android:exported="false">
             <meta-data
@@ -29,29 +57,35 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.ReportDetailActivity"
+            android:name=".view.report.ReportDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.StaffActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-        <activity
-            android:name=".view.ProjectsActivity"
+            android:name=".view.staff.StaffActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.ReportAddActivity"
+            android:name=".view.project.ProjectsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.project.ProjectAddActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.report.ReportAddActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -65,13 +99,11 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.ReportsActivity"
+            android:name=".view.report.ReportsActivity"
             android:exported="false" />
-
         <activity
             android:name=".view.UserRequestsActivity"
             android:exported="false" />
-
         <activity
             android:name=".view.MainActivity"
             android:exported="true">

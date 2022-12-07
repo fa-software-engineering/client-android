@@ -1,4 +1,4 @@
-package com.example.company_application.view
+package com.example.company_application.view.project
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
 import kotlinx.android.synthetic.main.activity_project_add.*
-import kotlinx.android.synthetic.main.activity_projects.*
 
 
 class ProjectAddActivity : AppCompatActivity() {

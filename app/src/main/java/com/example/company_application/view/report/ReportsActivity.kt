@@ -1,4 +1,4 @@
-package com.example.company_application.view
+package com.example.company_application.view.report
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

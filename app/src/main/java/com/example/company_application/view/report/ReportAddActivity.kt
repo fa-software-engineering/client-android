@@ -1,4 +1,4 @@
-package com.example.company_application.view
+package com.example.company_application.view.report
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_gray">#2F4F4F</color>
     <color name="azure">#F0FFF0</color>
+    <color name="red">#CD1A0C</color>
 </resources>

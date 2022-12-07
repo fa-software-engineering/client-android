@@ -42,5 +42,12 @@
     <string name="activity_candidate_add_skills_textField_hint">Введите навыки</string>
     <string name="activity_candidate_saveBtn_text">Сохранить</string>
     <string name="activity_candidate_deleteBtn_text">Удалить</string>
+    <string name="task">Задача</string>
+    <string name="status">Статус</string>
+    <string name="staff_one">Сотруд.</string>
+    <string name="skills_table">Навыки</string>
+    <string name="personal_staff">Личный кабинет сотрудника</string>
+    <string name="search_by_skills">Поиск по скиллам</string>
+    <string name="search_by_date">Кол-во дней</string>
 
 </resources>
