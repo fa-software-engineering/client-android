@@ -10,8 +10,8 @@
         android:id="@+id/activity_report_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="28dp"
         android:text="@string/activity_report_label"
         android:textColor="@color/dark_gray"
         android:textSize="24sp"
@@ -21,8 +21,8 @@
 
     <ListView
         android:id="@+id/activity_report_listView"
-        android:layout_width="411dp"
-        android:layout_height="136dp"
+        android:layout_width="358dp"
+        android:layout_height="126dp"
         android:layout_marginBottom="296dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -10,8 +10,8 @@
         android:id="@+id/activity_request_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:text="@string/request"
         android:textColor="@color/dark_gray"
         android:textSize="24sp"
@@ -41,19 +41,19 @@
 
     <ListView
         android:id="@+id/activity_request_listView"
-        android:layout_width="410dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="384dp"
+        android:layout_width="359dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="328dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/activity_request_editText"
-        android:layout_width="412dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="296dp"
+        android:layout_width="359dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="256dp"
         android:autofillHints="@string/activity_request_editText_autofill_hint"
         android:ems="10"
         android:hint="@string/activity_request_editText_hint"
@@ -61,7 +61,7 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

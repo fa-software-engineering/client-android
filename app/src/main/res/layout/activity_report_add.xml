@@ -10,8 +10,8 @@
         android:id="@+id/activity_report_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="32dp"
         android:text="@string/activity_report_add_label"
         android:textColor="@color/dark_gray"
         android:textSize="24sp"
@@ -23,23 +23,23 @@
         android:id="@+id/activity_report_add_buttonSaveReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/activity_report_container"
-        android:layout_width="405dp"
-        android:layout_height="296dp"
+        android:layout_width="356dp"
+        android:layout_height="291dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422">
+        app:layout_constraintVertical_bias="0.395">
 
         <EditText
             android:id="@+id/activity_report_add_code_textField"

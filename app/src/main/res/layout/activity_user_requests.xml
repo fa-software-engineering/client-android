@@ -8,11 +8,12 @@
 
     <TextView
         android:id="@+id/activity_user_requests_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="335dp"
+        android:layout_height="71dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="24dp"
         android:text="@string/activity_user_requests_label"
+        android:textAlignment="center"
         android:textColor="@color/dark_gray"
         android:textSize="24sp"
         android:textStyle="bold|italic"
@@ -21,8 +22,8 @@
 
     <ListView
         android:id="@+id/activity_user_requests_listView"
-        android:layout_width="409dp"
-        android:layout_height="477dp"
+        android:layout_width="361dp"
+        android:layout_height="374dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
