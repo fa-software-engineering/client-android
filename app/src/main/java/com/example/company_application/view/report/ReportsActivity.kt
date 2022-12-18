@@ -3,10 +3,12 @@ package com.example.company_application.view.report
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import com.example.company_application.R
+import kotlinx.android.synthetic.main.activity_projects.*
 import kotlinx.android.synthetic.main.activity_reports.*
 
 class ReportsActivity : AppCompatActivity() {
@@ -21,6 +23,11 @@ class ReportsActivity : AppCompatActivity() {
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
         reports_listView.adapter = adapter
 
+
+        val sign = intent.getBooleanExtra("bool", false)
+        if (sign){
+            activity_reports_buttonAdd.visibility = View.GONE
+        }
 
         reports_listView.setOnItemClickListener { parent, view, position, id ->
             val element = view as TextView

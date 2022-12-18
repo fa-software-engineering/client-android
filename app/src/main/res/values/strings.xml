@@ -49,5 +49,7 @@
     <string name="personal_staff">Личный кабинет сотрудника</string>
     <string name="search_by_skills">Поиск по скиллам</string>
     <string name="search_by_date">Кол-во дней</string>
+    <string name="skills_add_tv">Введите название навыка</string>
+    <string name="skills_add_but">Добавить навык</string>
 
 </resources>

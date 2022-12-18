@@ -34,7 +34,6 @@ class ProjectAddActivity : AppCompatActivity() {
 
         save_project.setOnClickListener {
             onBackPressed()
-            sendDataToDB("some")
         }
     }
 

@@ -19,10 +19,17 @@ class ProjectDetailActivity : AppCompatActivity() {
 
         val row: TableRow = LayoutInflater.from(this)
             .inflate(R.layout.table_row, null) as TableRow
-        row.task_column.text = "gkofk"
-        row.skills_column.text = "gkofk"
-        row.checkbox.isChecked = true
+        row.task_column.text = "Создать интерфейс"
+        row.skills_column.text = "XML"
+        row.checkbox.isChecked = false
         task_table.addView(row)
+
+        val row2: TableRow = LayoutInflater.from(this)
+            .inflate(R.layout.table_row, null) as TableRow
+        row2.task_column.text = "Разработать функционал"
+        row2.skills_column.text = "Java"
+        row2.checkbox.isChecked = false
+        task_table.addView(row2)
 
         save_project_detail.setOnClickListener {
             onBackPressed()

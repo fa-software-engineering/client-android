@@ -11,11 +11,11 @@ class StaffDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_staff_detail)
 
         //заполение полей из БД
-        fio_edit_text.setText("")
-        depart_edit_text.setText("")
-        pos_edit_text.setText("")
-        grade_edit_text.setText("")
-        skills_edit_text.setText("")
+        fio_edit_text.setText("Гриорьев Александр Витальевич")
+        depart_edit_text.setText("Отдел разработки")
+        pos_edit_text.setText("Разработчик")
+        grade_edit_text.setText("Старший")
+        skills_edit_text.setText("Java, Postman, MVP")
 
         save_personal_staff.setOnClickListener {
             onBackPressed()

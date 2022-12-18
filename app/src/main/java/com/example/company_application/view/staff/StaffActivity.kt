@@ -1,28 +1,30 @@
 package com.example.company_application.view.staff
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.method.TextKeyListener.clear
 import android.widget.ArrayAdapter
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
-import com.example.company_application.view.project.ProjectDetailActivity
 import kotlinx.android.synthetic.main.activity_projects.*
 import kotlinx.android.synthetic.main.activity_staff.*
+
 
 class StaffActivity : AppCompatActivity() {
 
     private var listItems = ArrayList<String>()
+    private lateinit var adapter: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_staff)
-
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
+        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
         staff_listView.adapter = adapter;
 
-        listItems.add("Сотрудник 1")
-        listItems.add("Сотрудник 2")
+        listItems.add("Иванов Андрей Михайлович")
+        listItems.add("Гроздев Виктор Олегович")
+
         adapter.notifyDataSetChanged()
 
         staff_listView.setOnItemClickListener { parent, view, position, id ->
@@ -32,16 +34,24 @@ class StaffActivity : AppCompatActivity() {
         }
 
         search_staff.setOnClickListener {
-            searchBySkills(skills_edit_text.text.toString())
-            searchByDate(day_edit_text.text.toString().toInt())
+            listItems.clear()
+            listItems.add("Гроздев Виктор Олегович")
+            adapter.notifyDataSetChanged()
         }
 
         add_staff.setOnClickListener {
             val intent = Intent(this, StaffAddActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent ,1)
         }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        listItems.add(data?.getStringExtra("name").toString())
+        adapter.notifyDataSetChanged()
+    }
+
 
     private fun searchBySkills(skills: String){
         //запрос в БД, сравнение
