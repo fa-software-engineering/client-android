@@ -88,6 +88,7 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Гроздев Виктор Олегович"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -99,6 +100,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Отдел разработки"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/fio_edit_text" />
 
@@ -109,6 +111,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="12dp"
         android:ems="10"
+        android:text="Старший Android Разработчик"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/depart_edit_text" />
@@ -120,6 +123,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="13dp"
         android:ems="10"
+        android:text="Разработчик"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/pos_edit_text" />
@@ -132,6 +136,7 @@
         android:layout_marginTop="11dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Java, Postman, MVP"
         app:layout_constraintStart_toEndOf="@+id/tv"
         app:layout_constraintTop_toBottomOf="@+id/grade_edit_text" />
 

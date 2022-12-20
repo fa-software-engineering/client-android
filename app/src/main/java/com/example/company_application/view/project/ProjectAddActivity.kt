@@ -36,16 +36,4 @@ class ProjectAddActivity : AppCompatActivity() {
             onBackPressed()
         }
     }
-
-    //TODO - Получение даннных с Api у бэка
-    private fun getDataFromDB(){
-
-    }
-    //TODO - Отправка данных на Api у бэка
-    private fun sendDataToDB(data : String){
-
-    }
-
-
-
 }

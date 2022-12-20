@@ -13,8 +13,8 @@ class StaffDetailActivity : AppCompatActivity() {
         //заполение полей из БД
         fio_edit_text.setText("Гриорьев Александр Витальевич")
         depart_edit_text.setText("Отдел разработки")
-        pos_edit_text.setText("Разработчик")
-        grade_edit_text.setText("Старший")
+        pos_edit_text.setText("Старший Android Разработчик")
+        grade_edit_text.setText("Разработчик")
         skills_edit_text.setText("Java, Postman, MVP")
 
         save_personal_staff.setOnClickListener {

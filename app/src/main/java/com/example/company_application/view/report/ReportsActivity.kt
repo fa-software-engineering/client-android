@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import com.example.company_application.R
+import com.example.company_application.view.project.ProjectAddActivity
 import kotlinx.android.synthetic.main.activity_projects.*
 import kotlinx.android.synthetic.main.activity_reports.*
 
@@ -30,32 +31,26 @@ class ReportsActivity : AppCompatActivity() {
         }
 
         reports_listView.setOnItemClickListener { parent, view, position, id ->
-            val element = view as TextView
-            val data = element.text.toString()
-            Toast.makeText(this, "Данные выбранного отчета: $data", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, ReportDetailActivity::class.java)
-            intent.putExtra("reportData", data)
+//            intent.putExtra("reportData", data)
             startActivity(intent)
 
         }
         activity_reports_buttonAdd.setOnClickListener{
             val intent = Intent(this, ReportAddActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, 1)
         }
 
-        listItems.add("Отчет 1")
-        listItems.add("Отчет 2")
+        listItems.add("Отчет о создании интерфейса")
+        listItems.add("Отчет о проектировании БД")
         adapter.notifyDataSetChanged()
 
     }
 
-    //TODO - Получение даннных с Api у бэка
-    private fun getDataFromDB(){
-
-    }
-    //TODO - Отправка данных на Api у бэка
-    private fun sendDataToDB(data : String){
-
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        listItems.add("Отчет о разработке приложения")
+        adapter.notifyDataSetChanged()
     }
 }

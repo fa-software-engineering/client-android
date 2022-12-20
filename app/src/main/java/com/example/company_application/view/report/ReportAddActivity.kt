@@ -10,19 +10,7 @@ class ReportAddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_add)
         activity_report_add_buttonSaveReport.setOnClickListener{
-            val code = activity_report_add_code_textField.text.toString()
-            val name = activity_report_add_name_textField.text.toString()
-            val description = activity_report_add_description_textField.text.toString()
-            val data = arrayListOf(code, name, description)
             finish()
         }
-    }
-    //TODO - Получение даннных с Api у бэка
-    private fun getDataFromDB(){
-
-    }
-    //TODO - Отправка данных на Api у бэка
-    private fun sentDataToDB(data : String){
-
     }
 }

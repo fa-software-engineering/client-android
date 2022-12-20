@@ -23,7 +23,7 @@ class StaffActivity : AppCompatActivity() {
         staff_listView.adapter = adapter;
 
         listItems.add("Иванов Андрей Михайлович")
-        listItems.add("Гроздев Виктор Олегович")
+        listItems.add("Волков Владимир Дмитриевич")
 
         adapter.notifyDataSetChanged()
 

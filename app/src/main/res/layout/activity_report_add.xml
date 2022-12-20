@@ -32,42 +32,70 @@
 
     <LinearLayout
         android:id="@+id/activity_report_container"
-        android:layout_width="356dp"
-        android:layout_height="291dp"
+        android:layout_width="361dp"
+        android:layout_height="374dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395">
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/activity_report_add_code_textField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="@string/activity_report_add_code_textField_hint"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/activity_report_add_name_textField"
+            android:id="@+id/report_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="@string/activity_report_add_name_textField_hint"
+            android:text="Отчет о разработке приложения"
             android:inputType="textPersonName"
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/activity_report_add_description_textField"
+            android:id="@+id/report_date"
             android:layout_width="match_parent"
-            android:layout_height="125dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="@string/activity_report_add_description_textField_hint"
-            android:inputType="textPersonName" />
+            android:hint="Введите дату"
+            android:text="16.09.2018"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/report_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Введите процент выполнения"
+            android:text="80%"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/report_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Введите описание проделанной работы"
+            android:text="Выполняется"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/report_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Введите результаты"
+            android:text="Сделаны модели"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
