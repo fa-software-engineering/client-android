@@ -13,6 +13,5 @@ class AddCandidateActivity : AppCompatActivity() {
         add_activity_candidate_saveBtn.setOnClickListener{
             finish()
         }
-
     }
 }

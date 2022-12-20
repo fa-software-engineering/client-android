@@ -19,24 +19,30 @@ class UserRequestsActivity : AppCompatActivity() {
         array = ArrayList()
         arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, array)
         activity_user_requests_listView.adapter = arrayAdapter
+        array.add("Проблема с соединением")
 
         activity_user_requests_listView.setOnItemClickListener{
             parent, clickedView, position, id ->
             val item = clickedView as TextView
             val data : String = item.text.toString()
-            Toast.makeText(this, "Данные выбранного пользователя: $data", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Вы выбрали обращение: $data", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, RequestDetailActivity::class.java)
-            intent.putExtra("userData", data)
-            startActivity(intent)
+            startActivityForResult(intent, 1)
         }
     }
-    //TODO - Получение даннных с Api у бэка
-    private fun getDataFromDB(){
 
-    }
-    //TODO - Отправка данных на Api у бэка
-    private fun sentDataToDB(data : String){
-
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when(resultCode){
+            5 ->{
+                Toast.makeText(this, "Вы ответили на обращение пользователя", Toast.LENGTH_LONG).show()
+            }
+            6 -> {
+                Toast.makeText(this, "Обращение пользователя решено", Toast.LENGTH_LONG).show()
+                array.remove("Проблема с соединением")
+                arrayAdapter.notifyDataSetChanged()
+            }
+        }
     }
 }
