@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.candidates.AddCandidateActivity">
+    <TextView
+        android:id="@+id/add_activity_candidate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_candidate_label"
+        android:textColor="@color/dark_gray"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/add_activity_candidate_container"
+        android:layout_width="359dp"
+        android:layout_height="353dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436">
+
+        <EditText
+            android:id="@+id/add_activity_candidate_add_FIO_textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/activity_candidate_add_FIO_textField_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Иванов Максим Викторович"
+            android:textColorHint="#78909C" />
+
+        <EditText
+            android:id="@+id/add_activity_candidate_add_role_textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/activity_candidate_add_role_textField_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Сотрудник отдела аналитики"
+            android:textColorHint="#78909C" />
+
+        <EditText
+            android:id="@+id/add_activity_candidate_add_position_textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/activity_candidate_add_position_textField_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Аналитик"
+            android:textColorHint="#78909C" />
+
+        <EditText
+            android:id="@+id/add_activity_candidate_add_skills_textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/activity_candidate_add_skills_textField_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Знание ML, SQL"
+            android:textColorHint="#78909C" />
+
+        <EditText
+            android:id="@+id/add_activity_candidate_add_grade_textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/activity_candidate_add_grade_textField_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Стажер"
+            android:textColorHint="#78909C" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_activity_candidate_saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/activity_candidate_saveBtn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
