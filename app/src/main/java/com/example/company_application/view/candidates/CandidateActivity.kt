@@ -1,4 +1,4 @@
-package com.example.company_application.view
+package com.example.company_application.view.candidates
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,22 +12,16 @@ class CandidateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_candidate)
 
         val data = intent.getStringExtra("userData")
-        // TODO потом заполнить филды data
+
+        activity_candidate_add_FIO_textField.setText(data)
 
         activity_candidate_saveBtn.setOnClickListener{
-            val fio = activity_candidate_add_FIO_textField.text.toString()
-            val role = activity_candidate_add_role_textField.text.toString()
-            val position = activity_candidate_add_position_textField.text.toString()
-            val skills = activity_candidate_add_skills_textField.text.toString()
-            val grade = activity_candidate_add_grade_textField.text.toString()
-
-            val data = arrayListOf(fio, role, position, skills, grade)
-
+            setResult(5,intent.putExtra("data", data))
             finish()
         }
 
         activity_candidate_deleteBtn.setOnClickListener{
-            // TODO удаление кандидата
+            setResult(6, intent.putExtra("dataToDelete", data))
             finish()
         }
 

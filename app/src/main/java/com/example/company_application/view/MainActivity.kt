@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
+import com.example.company_application.view.candidates.CandidatesActivity
 import com.example.company_application.view.project.ProjectsActivity
 import com.example.company_application.view.report.ReportsActivity
 import com.example.company_application.view.staff.StaffActivity
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.candidates -> {
-                startActivity(Intent(this, UserRequestsActivity::class.java))
+                startActivity(Intent(this, CandidatesActivity::class.java))
                 true
             }
             R.id.skills -> {
@@ -94,7 +95,6 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-
     }
 
     private fun openRegistrationScreen() {
@@ -133,6 +133,13 @@ class MainActivity : AppCompatActivity() {
                     menu.findItem(R.id.staff).isVisible = false
                     menu.findItem(R.id.reports).isVisible = false
                     menu.findItem(R.id.projects).isVisible = false
+                    fio_edit.text = "Лазарев Андрей Абрамович"
+                    depart_edit.text = "Отдел аналитики"
+                    pos_edit.text = "Главный аналитик"
+                    grade_edit.text = "Руководитель отдела"
+                    skills_edit.text = "Сбор и анализ требований заказчиков, фильтрация, данных, умение писать запросы на SQL"
+
+
                 }
                 '3' -> {
                     menu.findItem(R.id.skills).isVisible = false
@@ -140,6 +147,12 @@ class MainActivity : AppCompatActivity() {
                     menu.findItem(R.id.staff).isVisible = false
                     menu.findItem(R.id.request).isVisible = false
                     menu.findItem(R.id.projects).isVisible = false
+                    fio_edit.text = "Маликов Артем Игоревич"
+                    depart_edit.text = "Отдел службы поддержки"
+                    pos_edit.text = "Сотрудник службы поддержки"
+                    grade_edit.text = "Младший сотрудник"
+                    skills_edit.text = "Четкая и грамотно поставленная речь, умение найти язык с любым клиентом"
+
                 }
                 '4' -> {
                     menu.findItem(R.id.skills).isVisible = false
@@ -147,6 +160,12 @@ class MainActivity : AppCompatActivity() {
                     menu.findItem(R.id.staff).isVisible = false
                     menu.findItem(R.id.request).isVisible = false
                     menu.findItem(R.id.projects).isVisible = false
+                    fio_edit.text = "Абрамов Евгений Михайлович"
+                    depart_edit.text = "HR отдел"
+                    pos_edit.text = "HR менеджер"
+                    grade_edit.text = "Менеджер отдела"
+                    skills_edit.text = "Отслеживание ситуации на рынке труда в стране. Формирование кадрового резерва. Найм талантливых и нужных специалистов в команду"
+
                 }
                 '5' -> {
                     menu.findItem(R.id.skills).isVisible = false
