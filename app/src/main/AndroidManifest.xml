@@ -106,7 +106,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.RequestDetailActivity"
+            android:name=".view.requests.RequestDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -116,7 +116,7 @@
             android:name=".view.report.ReportsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.UserRequestsActivity"
+            android:name=".view.requests.UserRequestsActivity"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

@@ -5,20 +5,18 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
 import com.example.company_application.view.candidates.CandidatesActivity
 import com.example.company_application.view.project.ProjectsActivity
 import com.example.company_application.view.report.ReportsActivity
+import com.example.company_application.view.requests.UserRequestsActivity
 import com.example.company_application.view.staff.StaffActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_personal.*
-import kotlinx.android.synthetic.main.activity_projects.*
-import kotlinx.android.synthetic.main.activity_reports.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -137,7 +135,7 @@ class MainActivity : AppCompatActivity() {
                     depart_edit.text = "Отдел аналитики"
                     pos_edit.text = "Главный аналитик"
                     grade_edit.text = "Руководитель отдела"
-                    skills_edit.text = "Сбор и анализ требований заказчиков, фильтрация, данных, умение писать запросы на SQL"
+                    skills_edit.text = "Сбор и анализ требований заказчиков"
 
 
                 }
@@ -145,13 +143,13 @@ class MainActivity : AppCompatActivity() {
                     menu.findItem(R.id.skills).isVisible = false
                     menu.findItem(R.id.candidates).isVisible = false
                     menu.findItem(R.id.staff).isVisible = false
-                    menu.findItem(R.id.request).isVisible = false
+                    menu.findItem(R.id.reports).isVisible = false
                     menu.findItem(R.id.projects).isVisible = false
                     fio_edit.text = "Маликов Артем Игоревич"
                     depart_edit.text = "Отдел службы поддержки"
                     pos_edit.text = "Сотрудник службы поддержки"
                     grade_edit.text = "Младший сотрудник"
-                    skills_edit.text = "Четкая и грамотно поставленная речь, умение найти язык с любым клиентом"
+                    skills_edit.text = "Четкая и грамотно поставленная речь"
 
                 }
                 '4' -> {
@@ -164,7 +162,7 @@ class MainActivity : AppCompatActivity() {
                     depart_edit.text = "HR отдел"
                     pos_edit.text = "HR менеджер"
                     grade_edit.text = "Менеджер отдела"
-                    skills_edit.text = "Отслеживание ситуации на рынке труда в стране. Формирование кадрового резерва. Найм талантливых и нужных специалистов в команду"
+                    skills_edit.text = "Отслеживание ситуации на рынке труда в стране"
 
                 }
                 '5' -> {
