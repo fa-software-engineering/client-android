@@ -1,20 +1,16 @@
 package com.example.company_application.view.report
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.company_application.R
-import com.example.company_application.view.project.ProjectAddActivity
-import kotlinx.android.synthetic.main.activity_projects.*
 import kotlinx.android.synthetic.main.activity_reports.*
 
 class ReportsActivity : AppCompatActivity() {
-    private lateinit var listItems : ArrayList<String>
-    private lateinit var adapter : ArrayAdapter<String>
+    private lateinit var listItems: ArrayList<String>
+    private lateinit var adapter: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +22,7 @@ class ReportsActivity : AppCompatActivity() {
 
 
         val sign = intent.getBooleanExtra("bool", false)
-        if (sign){
+        if (sign) {
             activity_reports_buttonAdd.visibility = View.GONE
         }
 
@@ -37,7 +33,7 @@ class ReportsActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        activity_reports_buttonAdd.setOnClickListener{
+        activity_reports_buttonAdd.setOnClickListener {
             val intent = Intent(this, ReportAddActivity::class.java)
             startActivityForResult(intent, 1)
         }

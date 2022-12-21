@@ -23,7 +23,7 @@ class ProjectsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_projects)
 
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
-        project_listView.adapter = adapter;
+        project_listView.adapter = adapter
 
         val sign = intent.getBooleanExtra("bool", false)
         if (sign){

@@ -19,7 +19,7 @@ class SkillsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_skills)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
-        skills_add_listView.adapter = adapter;
+        skills_add_listView.adapter = adapter
 
         create_skills.setOnClickListener {
             val text = create_skills_edit_text.text.toString()

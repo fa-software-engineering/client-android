@@ -15,12 +15,12 @@ class CandidateActivity : AppCompatActivity() {
 
         activity_candidate_add_FIO_textField.setText(data)
 
-        activity_candidate_saveBtn.setOnClickListener{
-            setResult(5,intent.putExtra("data", data))
+        activity_candidate_saveBtn.setOnClickListener {
+            setResult(5, intent.putExtra("data", data))
             finish()
         }
 
-        activity_candidate_deleteBtn.setOnClickListener{
+        activity_candidate_deleteBtn.setOnClickListener {
             setResult(6, intent.putExtra("dataToDelete", data))
             finish()
         }

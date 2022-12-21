@@ -20,7 +20,7 @@ class StaffActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_staff)
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
-        staff_listView.adapter = adapter;
+        staff_listView.adapter = adapter
 
         listItems.add("Иванов Андрей Михайлович")
         listItems.add("Волков Владимир Дмитриевич")

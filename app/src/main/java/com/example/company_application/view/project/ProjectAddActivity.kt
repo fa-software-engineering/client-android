@@ -17,7 +17,7 @@ class ProjectAddActivity : AppCompatActivity() {
         setContentView(R.layout.activity_project_add)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
-        project_add_listView.adapter = adapter;
+        project_add_listView.adapter = adapter
 
         add_skills.setOnClickListener {
             val text = skills_editText.text.toString()

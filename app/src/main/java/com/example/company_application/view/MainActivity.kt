@@ -37,14 +37,12 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
-        this.menu = menu;
+        this.menu = menu
         return true
     }
-
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -54,10 +52,10 @@ class MainActivity : AppCompatActivity() {
 
                 if (fio_edit.text.toString() == "Шарков Андрей Владимирович") {
                     intent.putExtra("bool", true)
-                }else{
+                } else {
                     intent.putExtra("bool", false)
                 }
-                    startActivity(intent)
+                startActivity(intent)
                 true
             }
             R.id.reports -> {
@@ -65,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (fio_edit.text.toString() == "Шарков Андрей Владимирович") {
                     intent.putExtra("bool", true)
-                }else{
+                } else {
                     intent.putExtra("bool", false)
                 }
                 startActivity(intent)

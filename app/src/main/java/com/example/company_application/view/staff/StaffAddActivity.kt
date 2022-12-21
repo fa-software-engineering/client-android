@@ -21,7 +21,7 @@ class StaffAddActivity : AppCompatActivity() {
 
         save_personal_staff.setOnClickListener {
             intent.putExtra("name", fio_edit_text.text.toString())
-            setResult(RESULT_OK, intent);
+            setResult(RESULT_OK, intent)
             finish()
         }
 

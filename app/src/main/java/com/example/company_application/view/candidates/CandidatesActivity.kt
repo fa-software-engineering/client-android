@@ -12,8 +12,8 @@ import kotlinx.android.synthetic.main.activity_candidate.*
 import kotlinx.android.synthetic.main.activity_candidates.*
 
 class CandidatesActivity : AppCompatActivity() {
-    private lateinit var array : ArrayList<String>
-    private lateinit var arrayAdapter : ArrayAdapter<String>
+    private lateinit var array: ArrayList<String>
+    private lateinit var arrayAdapter: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +26,12 @@ class CandidatesActivity : AppCompatActivity() {
         array.add("Обломов Иван Александрович")
         arrayAdapter.notifyDataSetChanged()
 
-        activity_candidates_addButton.setOnClickListener{
+        activity_candidates_addButton.setOnClickListener {
             val intent = Intent(this, AddCandidateActivity::class.java)
             startActivityForResult(intent, 1)
         }
 
-        activity_candidates_listView.setOnItemClickListener{ parent, view, position, id ->
+        activity_candidates_listView.setOnItemClickListener { parent, view, position, id ->
             val element = view as TextView
             val data = element.text.toString()
             Toast.makeText(this, "Данные о кандидате:\n $data", Toast.LENGTH_LONG).show()
@@ -46,13 +46,13 @@ class CandidatesActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        when(requestCode){
+        when (requestCode) {
             1 -> {
                 array.add("Иванов Максим Викторович")
                 arrayAdapter.notifyDataSetChanged()
             }
             2 -> {
-                when(resultCode){
+                when (resultCode) {
                     5 -> {
                         val name = data?.getStringExtra("data")
                     }

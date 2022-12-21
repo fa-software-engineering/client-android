@@ -10,7 +10,7 @@ class AddCandidateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_candidate)
 
-        add_activity_candidate_saveBtn.setOnClickListener{
+        add_activity_candidate_saveBtn.setOnClickListener {
             finish()
         }
     }

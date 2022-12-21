@@ -11,7 +11,7 @@ class SupportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_support)
 
-        button5.setOnClickListener{
+        button5.setOnClickListener {
             finish()
         }
     }
